@@ -6,4 +6,18 @@ If you have a suggestion regarding a particular topic (correction, typo, etc.), 
 
 # Table of contents
 
-Coming soon...
+
++ Misc
+    + [Markdown](/misc/markdown.md)
++ Command Line
+    + [Introduction](/command-line/intro.md)
+    + [Mac Terminal](/command-line/mac-terminal.md)
+    + [Windows Cmder](/command-line/windows-cmder.md)
+    + [Primer](/command-line/primer.md)
+    + [Common commands](/command-line/common-commands.md)
+    + [Text editing with Nano](/command-line/nano.md)
++ Servers and Git
+    + [Intro](/servers-and-git/intro.md)
+    + [Local server setup](/servers-and-git/local-server-setup.md)
+    + [Local server troubleshooting](/servers-and-git/local-server-troubleshooting.md)
+        
