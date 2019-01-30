@@ -20,7 +20,7 @@ Of the styling features Markdown supports, here are the ones you should be sure 
 + Links
 + Images
 + Code
-	+ Inline code
-	+ Block code w/ syntax highlighting
+    + Inline code
+    + Block code w/ syntax highlighting
 
-After you've studied the abovementioned guide, read [this example post demonstrating Markdown features](https://github.com/susanBuck/dwa15-fall2018/issues/1).
+After you've studied the aforementioned guide, read [this example post demonstrating Markdown features](https://github.com/susanBuck/dwa15-spring2019/issues/2).
