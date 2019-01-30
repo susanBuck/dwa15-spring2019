@@ -9,11 +9,11 @@ For example, in this course when we deploy our applications on a production serv
 + The __M__ stands for __MySQL__ - Open-source database server.
 + The __P__ stands for __PHP__ - Web scripting language.
 
-In order to run, debug, and test our applications, we want to mirror this stack on our own local machines, substituting Linux for whatever operating system we use.spring-2018
+In order to run, debug, and test our applications, we want to mirror this stack on our own local machines, substituting Linux for whatever operating system we use (e.g. Mac OS or Windows).
 
 We could individually download and install Apache, PHP and MySQL on our computers, but a simpler approach is to use a program that manages all three such as [MAMP](https://mamp.info) or [XAMPP](https://www.apachefriends.org/index.html).
 
-While both MAMP and XAMPP are cross-platform, experience in past semesters suggest that MAMP works best for Mac users and XAMPP works best for PC users, so that is my recommendation. Below are instructions for setting up both.
+While both MAMP and XAMPP are cross-platform, experience in past semesters suggest that MAMP works best for Mac users and XAMPP works best for Windows users, so that is my recommendation. Below are instructions for setting up both.
 
 
 ## MAMP Setup on Mac
@@ -57,7 +57,7 @@ That's it! Your local server for Mac is installed, running, and tested.
 
 
 ## XAMPP Setup on Windows
-Download **[xampp-win32-7.2.9-0-VC15-installer.exe](https://www.apachefriends.org/xampp-files/7.2.9/xampp-win32-7.2.9-0-VC15-installer.exe)**.
+Download **[xampp-win32-7.3.1-0-VC15-installer.exe](https://www.apachefriends.org/xampp-files/7.3.1/xampp-win32-7.3.1-0-VC15-installer.exe)**.
 
 Install XAMPP...
 
