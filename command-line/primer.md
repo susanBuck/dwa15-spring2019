@@ -126,7 +126,7 @@ $ man rm
 
 The output from the `man` command will often span multiple screens. Use the `Enter` key to page through the output, or hit `ctrl` + `z` to exit.
 
-__Windows/Cmder users__: Unfortunately `man` does not work in Cmder, but you can learn more about common commands by typing them it in at [ExplainShell](http://explainshell.com/).
+__Windows/Cmder users__: Unfortunately `man` does not work in Cmder, but you can learn more about common commands by typing them in at [ExplainShell](http://explainshell.com/).
 
 
 ## Cleaning up
