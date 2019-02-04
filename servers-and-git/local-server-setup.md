@@ -75,7 +75,7 @@ If either of these services don't start up, you'll want to read these notes: [__
 
 ### Your first file
 
-With MAMP installed and your local server running, you can test out a simple PHP script&mdash; create a new file in a code/text editor and save it as `helloworld.php` in `c:/xampp/htdocs/`. This path is your local server's **Document Root** which is where you'll put all your web files and projects. You may want to create a shortcut to this directory, because you'll be working in it a lot.
+With XAMPP installed and your local server running, you can test out a simple PHP script&mdash; create a new file in a code/text editor and save it as `helloworld.php` in `c:/xampp/htdocs/`. This path is your local server's **Document Root** which is where you'll put all your web files and projects. You may want to create a shortcut to this directory, because you'll be working in it a lot.
 
 Paste in [this code](https://gist.github.com/susanBuck/3f133c6d64be0f6f27a9) to your `helloworld.php` file.
 
