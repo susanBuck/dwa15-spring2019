@@ -15,7 +15,7 @@ $translations = [
 ];
 ```
 
-Note that the array's contents is encapsulated in square brackets.
+Note that the array’s content is encapsulated in square brackets.
 
 Each element in the array (e.g. `hello => hola`) is made up of a **key => value pair**.
 
@@ -121,7 +121,7 @@ array(2) {
 }
 ```
 
-To save you time, a function called `dump` is included in the [`helpers.php`](https://github.com/susanBuck/php/blob/master/helpers.php) helper file discussed in notes on [Imports](/php/imports.md)..
+To save you time, a function called `dump` is included in the [`helpers.php`](https://github.com/susanBuck/php/blob/master/helpers.php) helper file discussed in notes on [Imports](/php/imports.md).
 
 Using this function is as simple as this:
 ```php
@@ -282,7 +282,7 @@ foreach ($countries as $countryCode => &$country) {
 
 
 ## Built-in array functions
-Skim the complete list of built-in PHP [array functions](http://php.net/manual/en/ref.array.php) so you're aware of what's available.
+Skim the complete list of built-in PHP [array functions](http://php.net/manual/en/ref.array.php) so you're aware of what’s available.
 
 Sampling of commonly used array functions:
 + count — Count all elements in an array

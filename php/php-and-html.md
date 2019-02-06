@@ -5,7 +5,7 @@ This works for demonstration purposes, but obviously our web applications should
 
 We turn now, then, to the discussion of how PHP and HTML work together.
 
-First, it's important to know that a .php file can include both HTML and PHP code, for example, paste the following code in a new practice file called `today.php`:
+First, it’s important to know that a .php file can include both HTML and PHP code, for example, paste the following code in a new practice file called `today.php`:
 
 ```html
 <?php
@@ -83,14 +83,14 @@ Down in the body of the HTML, a small PHP code island was used to display the "t
 As you can see, mixing PHP and HTML code is straightforward, and in this simplistic example it works just fine.
 When dealing with even moderately complex web applications, however, this mixing of logic and display will be problematic, and so we'll design our codebase such that the logic and display code is separated yet connected  (rather than intermingled).
 
-Before we talk about how to do that, let's first spend more time explaining the distinction between logic and display PHP.
+Before we talk about how to do that, let’s first spend more time explaining the distinction between logic and display PHP.
 
 
 ## Logic and Display
 Generally speaking, code can be divided into two categories:
 
-1. Logic: Code that defines or performs logic, for example, setting a variable, defining or invoking a function.
-2. Display: Code that produces output (sometimes called side-effects)
+1. **Logic:** Code that defines or performs logic, for example, setting a variable, defining or invoking a function.
+2. **Display:** Code that produces output (sometimes called side-effects)
 
 __Example logic code:__
 
@@ -131,7 +131,7 @@ Display code takes the product of this logic and, in combination with HTML, disp
 
 __Example display task:__ If a user has recent orders, display each one.
 
-Your logic and display code depend on one another, but following the practices of [separation of concerns](https://en.wikipedia.org/wiki/Separation_of_concerns), it's important to keep them separate in your codebase.
+Your logic and display code depend on one another, but following the practices of [separation of concerns](https://en.wikipedia.org/wiki/Separation_of_concerns), it’s important to keep them separate in your codebase.
 
 For a basic PHP page like the daily planner example above, this is as simple as separating the two types of code into two different files and then connecting them.
 
@@ -239,7 +239,7 @@ You can write:
 Today is <?=$day?>
 ```
 
-It's a small difference, but the terser syntax will be appreciated in complex HTML structures.
+It’s a small difference, but the terser syntax will be appreciated in complex HTML structures.
 
 With for loops, instead of writing this:
 

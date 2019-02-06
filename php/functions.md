@@ -1,4 +1,5 @@
 # Functions
+In this note set we'll talk about **user-defined functions** (ones you can create yourself) and **built-in functions** (ones that are part of the core PHP library).
 
 ## User-defined functions
 Here's an example to demonstrate the syntax for user-defined functions:
@@ -22,7 +23,7 @@ echo getCelsius(75, false); # Output: 23.8888888889
 
 Observations:
 
-* Function begins with the keyword `function`.
+* Function definition begins with the keyword `function`.
 * Naming
     * `getCelsius` is the user-defined name for this function.
     * Function names should start with a letter or underscore, followed by any number of letters, numbers, or underscores.
@@ -30,7 +31,7 @@ Observations:
 * Parameters
     * Functions can accept 0 or more parameters, separated by commas (this example accepts 2).
     * A default argument can be assigned (`$includeUnit = true`).
-    * Parameters can be type hinted (`int $temperature`), requiring arguments for that parameter to match the specified type.
+    * Parameters can (but don’;t have to be) be type hinted (`int $temperature`), requiring arguments for that parameter to match the specified type.
 * The body of a function is encapsulated in curly brackets and indented.
 * This function returns a value, but a return statement is not required.
 
