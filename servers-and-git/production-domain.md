@@ -27,8 +27,9 @@ There are two separate records you'll want to configure in your DNS settings. Th
     + Short for "apex"; represents the main domain, e.g. yourdomain.com
 + __Value:__ Your DigitalOcean droplet IP address
 + __TTL:__ 1 min
-    + Time-to-live; indicates how long it will take for Namecheap's DNS servers to refresh their records regarding this entry.
+    + [Time-to-live](https://en.wikipedia.org/wiki/Time_to_live#DNS_records); indicates how the record will be cached for.
 
+Note: If you created a domain via nc.me, you may have an existing *A Record* pointing to Github pages (a free service they offer you when signing up). You want to either edit or delete this record to set up the *A Record* to point to your DigitalOcean IP. You should *not* configure things so you have two *A Records*, one pointing to the Github pages IP and one pointing to the DigitalOcean IP, as this will cause your domain to sporadically switch between what IP address it's using.
 
 ## Record 2 - Sub-domain
 + __Type:__ CNAME
@@ -38,6 +39,8 @@ There are two separate records you'll want to configure in your DNS settings. Th
 + __Value:__ yourdomain.com
 + __TTL:__ 1 min
     + Same as Record 1
+    
+
 
 
 ## Test it out

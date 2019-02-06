@@ -73,7 +73,7 @@ $ ssh root@your-digital-ocean-ip-address
 When you first connect, you'll see the following message indicating it's a connection your computer does not recognize. Type `yes` and hit *Enter* to confirm the connection.
 
 ```xml
-The authenticity of host '104.236.13.65 (104.236.13.65)' can't be established.
+The authenticity of host '206.189.237.84 (206.189.237.84)' can't be established.
 RSA key fingerprint is 4a:6e:8b:f2:39:27:ec:05:e1:46:e2:a6:80:e4:e9:d3.
 Are you sure you want to continue connecting (yes/no)? yes
 ```
@@ -155,7 +155,7 @@ You should see two files:
 
 If you access your site in the browser (via the IP address DigitalOcean gives you), you should see the default contents of `index.html` which looks like this:
 
-<img src='https://s3.amazonaws.com/making-the-internet/vc-digital-ocean-default-index@2x.png' class='' style='max-width:642px; width:100%' alt=''>
+<img src='https://s3.amazonaws.com/making-the-internet/vc-digital-ocean-default-index@2x.png' class='' style='max-width:497px; width:100%' alt='DigitalOcean default start page'>
 
 
 
