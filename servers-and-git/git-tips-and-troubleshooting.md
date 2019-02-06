@@ -113,9 +113,3 @@ source ~/.bashrc
 
 Now, try running a git command again.
 
-
-Source: ([mountain-lion-git-command-not-found-2-min-fix](http://dwainm.wordpress.com/2012/12/19/mountain-lion-git-command-not-found-2-min-fix))
-
-
-
-
