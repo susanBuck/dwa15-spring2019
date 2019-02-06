@@ -1,7 +1,7 @@
 **Preface: The following notes are FYI only; it's not required nor expected that you use HTTP/SSL for projects in this course**
 
 # HTTPS/SSL
-All semester, we've been accessing our production apps via urls starting with `http://`, which indicates the requested page is being loaded over an un-encrypted *HTTP (Hypertext Transport Protocol)* connection.
+In this course, we access our production apps via urls starting with `http://`, which indicates the requested page is being loaded over an un-encrypted *HTTP (Hypertext Transport Protocol)* connection.
 
 This is in contrast to if we were using a url like `https://` where the added `s` indicates **secure**.
 
