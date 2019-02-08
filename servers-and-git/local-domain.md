@@ -66,7 +66,7 @@ Windows/XAMPP users, yours will look like this. (The details of this example are
 <VirtualHost *:80>
     ServerName hello-world.loc
     DocumentRoot C:/xampp/htdocs/hello-world
-    <Directory C:/xampp/htdocs/foobooks/hello-world>
+    <Directory C:/xampp/htdocs/hello-world>
         Options Indexes FollowSymLinks MultiViews
         AllowOverride All
         Order allow,deny
