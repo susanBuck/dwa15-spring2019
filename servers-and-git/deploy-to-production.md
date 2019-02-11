@@ -172,7 +172,6 @@ Your directory structure on DigitalOcean should now look like this:
 + `/var/www/html`
     * `hello-world/`
     * `index.html`
-    * `info.php`
         
 Don't worry right now about previewing the *hello-world* app in the browser&mdash; we'll cover that in the next note set.
 
