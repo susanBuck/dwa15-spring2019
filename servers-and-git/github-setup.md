@@ -33,10 +33,10 @@ $ cd ~/.ssh
 
 __Windows/Cmder__ users:
 ```bash
-$ cd %home%\.ssh
+$ cd %homepath%\.ssh
 ```
 
-(FYI: `%home%` is a shortcut for your home directory on Windows)
+(FYI: `%homepath%` is a shortcut for your home directory on Windows)
 
 If a `.ssh` directory does not exist, create it and then navigate into it:
 
@@ -48,8 +48,8 @@ $ cd ~/.ssh
 
 Windows:
 ```bash
-$ mkdir %home%\.ssh
-$ cd %home%\.ssh
+$ mkdir %homepath%\.ssh
+$ cd %homepath%\.ssh
 ```
 
 Next, within the .ssh directory, run the following command to generate a new SSH key pair:
@@ -180,7 +180,7 @@ This may happen due to a permission issue on the SSH config file. To fix this, [
 Alternatively, you can bypass the SSH config file by explicitly specifying which key file you want to use when SSH'ing by including the `-i` (identify) flag, followed by the path to your key file. E.g.:
 
 ```
-ssh -T -i %home%/.ssh/dwa git@github.com
+ssh -T -i %homepath%/.ssh/dwa git@github.com
 ```
 
 
