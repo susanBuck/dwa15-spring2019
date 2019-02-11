@@ -24,7 +24,7 @@ $ cat ~/.ssh/dwa.pub
 Windows:
 
 ```bash
-$ cat %home%/.ssh/dwa.pub
+$ cat %homepath%/.ssh/dwa.pub
 ```
 
 Back in DigitalOcean, navigate to your account's security settings (<https://cloud.digitalocean.com/account/security>) and find the **SSH Keys** section where you'll see the option to **Add SSH Key**.
