@@ -23,7 +23,7 @@ If you're new to PhpStorm, I suggest importing my settings which will greatly si
 
 As you become more comfortable with the program, you can branch out and customize the program to your liking.
 
-1. Download [dwa-phpstorm-settings.jar](https://github.com/susanBuck/dwa15-spring2018/raw/master/misc/dwa-phpstorm-settings.jar)
+1. Download [dwa-phpstorm-settings.jar](/misc/dwa-phpstorm-settings.jar)
 2. *File* > *Import Settings* - select the `dwa-php-storm-settings.jar` file you just downloaded.
 
 My settings include everything *except* keymaps, as this varies between Mac/Windows. More on customizing your keymaps in a moment.
