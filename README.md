@@ -9,6 +9,9 @@ If you have a suggestion regarding a particular topic (correction, typo, etc.), 
 
 + Misc
     + [Markdown](/misc/markdown.md)
+    + [PhpStorm](/misc/phpstorm.md)
+    + [Code style](/misc/code-style.md)
+    + [Interface](/misc/interface.md)
 + Command Line
     + [Introduction](/command-line/intro.md)
     + [Mac Terminal](/command-line/mac-terminal.md)
@@ -48,6 +51,10 @@ If you have a suggestion regarding a particular topic (correction, typo, etc.), 
     + [Imports](/php/imports.md)
     + [Arrays](/php/arrays.md)
     + [PHP and HTML](/php/php-and-html.md)
+    + [Loops](/php/loops.md)
+    + [Forms](/php/forms.md)
+    + [Cookies and Sessions](/php/cookies-and-sessions.md)
     + Extras
         + [Random quote tips (P1)](/php/random-quote-tips.md)
+        + [Syntactic sugar](/php/syntactic-sugar.md)
         
