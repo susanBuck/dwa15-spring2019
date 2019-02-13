@@ -60,7 +60,8 @@ There are many built-in PHP functions ([full reference](http://php.net/manual/en
 + str_replace — Replace all occurrences of the search string with the replacement string
 + ucfirst — Make a string's first character uppercase
 + ucwords — Uppercase the first character of each word in a string
-+ ltrim - Strip whitespace (or other characters) from the beginning and end of a string
++ trim — Strip whitespace (or other characters) from the beginning and end of a string
++ ltrim - Strip whitespace (or other characters) from the beginning of a string
 + rtrim — Strip whitespace (or other characters) from the end of a string
 + explode — Split a string by string
 + htmlentities — Convert all applicable characters to HTML entities
