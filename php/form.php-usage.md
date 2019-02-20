@@ -21,7 +21,7 @@ Given that, it has the following limitations:
 
 I do not consider `Form.php` a &ldquo;real world&rdquo; solution&mdash; we're using it for learning/course purposes and to ease us into more sophisticated form operations and validation which we'll see when we get to Laravel. 
 
-(For some context and a preview of what's to come, you can skim the [Laravel docs on validation](https://laravel.com/docs/5.6/validation#available-validation-rules) including the [over 50 different validation rules](https://laravel.com/docs/5.6/validation#available-validation-rules)).
+(For some context and a preview of what's to come, you can skim the [Laravel docs on validation](https://laravel.com/docs/validation#available-validation-rules) including the [over 50 different validation rules](https://laravel.com/docs/validation#available-validation-rules)).
 
 
 ## Installation
