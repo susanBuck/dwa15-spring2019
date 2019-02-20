@@ -157,7 +157,7 @@ In place of the logic code you extracted from `today.php`, add a require stateme
 
 
 ```html
-<?php require('today-logic.php'); ?>
+<?php require 'today-logic.php'; ?>
 <!DOCTYPE html>
 <html>
 <head>
