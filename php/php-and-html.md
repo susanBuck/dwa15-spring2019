@@ -177,7 +177,7 @@ In place of the logic code you extracted from `today.php`, add a require stateme
 
 As you can see, all the prep work needed for the page is done in the logic file, `today-logic.php`. Then, the resulting HTML is built in the display file, `today.php`.
 
-Side note:
+### Omitting the closing PHP tag in logic files
 The above logic file purposefully excluded a closing PHP tag; it's not needed in files that don't produce any output, and excluding it helps prevent trailing spaces from being output to the page, which can break certain PHP functionality like redirects or setting cookies.
 
 
