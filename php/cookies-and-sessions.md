@@ -89,7 +89,7 @@ dump('You just searched for: '.$_POST['searchTerm']);
 
 
 ## Session example
-To uses PHP sessions, you first need to invoke the following function on any script that will use sessions. (This invokation is typically placed at the top of the script)
+To use PHP sessions, you first need to invoke the following function on any script that will use sessions. (This invocation is typically placed at the top of the script)
 
 ```php
 session_start();
