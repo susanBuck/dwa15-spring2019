@@ -53,7 +53,7 @@ If you have a suggestion regarding a particular topic (correction, typo, etc.), 
     + [Loops](/php/loops.md)
     + [Forms](/php/forms.md)
     + [Cookies and Sessions](/php/cookies-and-sessions.md)
-    + [Object Oriented Programming)](/php/oop.md)
+    + [Object Oriented Programming](/php/oop.md)
     + [Validation](/php/validation.md)
     + [Form.php usage](/php/form.php-usage.md)
     + Extras
