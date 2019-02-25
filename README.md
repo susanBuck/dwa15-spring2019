@@ -54,7 +54,12 @@ If you have a suggestion regarding a particular topic (correction, typo, etc.), 
     + [Loops](/php/loops.md)
     + [Forms](/php/forms.md)
     + [Cookies and Sessions](/php/cookies-and-sessions.md)
+    + [Object Oriented Programming)](/php/oop.md)
+    + [Validation](/php/validation.md)
+    + [Form.php usage](/php/form.php-usage.md)
     + Extras
         + [Random quote tips (P1)](/php/random-quote-tips.md)
         + [Syntactic sugar](/php/syntactic-sugar.md)
+        + [Garbage collection](/php/garbage-collection.md)
+        + [Extending Form.php](/php/form.php-extending.md)
         
