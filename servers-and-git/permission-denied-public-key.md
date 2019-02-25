@@ -88,7 +88,7 @@ cat ~/.ssh/dwa.pub | ssh root@your.digital.ocean.ip.address "cat >> ~/.ssh/autho
 
 Windows:
 ```
-cat %home%\.ssh\dwa.pub | ssh root@your.digital.ocean.ip.address "cat >> ~/.ssh/authorized_keys"
+cat %homepath%\.ssh\dwa.pub | ssh root@your.digital.ocean.ip.address "cat >> ~/.ssh/authorized_keys"
 ```
 
 This will take a copy of your local public key (`~/.ssh/dwa.pub`) and put it in your `authorized_keys` file on the server.
