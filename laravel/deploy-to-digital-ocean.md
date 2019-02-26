@@ -160,7 +160,7 @@ The above steps were a one-time-process for deploying a new Laravel application.
 Moving forward, your deployment process will look like this:
 
 1. From local `add`, `commit`, and `push` changes.
-2. SSH into your DigitalOcean droplet and navigate into your app folder, then run `git pull origin master`.
+2. SSH into your DigitalOcean droplet and navigate into your app folder, then run `git pull`.
 2. Also while SSH'd in to your app folder, run `composer install --no-dev`.
 
 It's important to always run `composer install --no-dev` when deploying code changes. This command will make sure your code base has the latest versions of all dependencies and it will also refresh your application's classmap with the latest details.
