@@ -5,7 +5,7 @@ Dependencies are outside code packages that a project may utilize (i.e. they dep
 
 Examples:
 + `Form.php` is a single-file dependency I provided that you manually included in your projects.
-+ jQuery is a client-side JS dependency that can be added to your project or linked via a CDN (*Content Delivery Network*, e.g. [cdnjs.com](http://cdnjs.com)).
++ jQuery is a client-side JavaScript dependency.
 + Similar to jQuery, Bootstrap is a client-side CSS dependency.
 
 Frameworks like Laravel require many dependencies, and so it is built using **dependency management software** called **Composer**.
