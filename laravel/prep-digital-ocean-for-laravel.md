@@ -136,52 +136,6 @@ Finally, to make all these changes take effect, restart Apache:
 $ service apache2 restart
 ```
 
-## Update PHP
-Next, some students *may* have to update PHP, depending on when you first created your Droplets.
-
-To determine if you have to update, run the command `php --version` on your server.
-
-If this outputs `PHP 7.0.32-0ubuntu0.16.04.1`, it means you created your Droplet on or before September 12th when LAMP 16.04 was the latest LAMP stack that DigitalOcean was providing.
-
-However, if it outputs `PHP 7.2.10-0ubuntu0.18.04.1`, it means you built your Droplet using the updated LAMP stack that DigitalOcean released after September 12th.
-
-If you fall into the first category (`PHP 7.0.32-0ubuntu0.16.04.1`) you will need to update the version of PHP that was installed with your LAMP stack. **If you fall into the second category, no further action is needed.**
-
-__Update PHP to 7.2 (Only do this if you have version 7.0)__
-
-Use `apt-get` to install `php7.2` as well as some related components:
-
-```xml
-$ sudo apt-get install php7.2 php7.2-mysql php7.2-xml
-```
-
-Tell Apache to disable the older version of PHP:
-```xml
-$ sudo a2dismod php7.0
-```
-
-And enable PHP 7.2:
-```php
-$ sudo a2enmod php7.2
-```
-
-Restart the Apache web server to make your changes take effect.
-```xml
-$ service apache2 restart
-```
-
-When you're done, you can confirm PHP command line is running the correct version:
-
-```
-$ php -v
-PHP 7.2.10-1+ubuntu16.04.1+deb.sury.org+1 (cli) (built: Oct  1 2018 11:45:50) ( NTS )
-Copyright (c) 1997-2018 The PHP Group
-Zend Engine v3.2.0, Copyright (c) 1998-2018 Zend Technologies
-    with Zend OPcache v7.2.10-1+ubuntu16.04.1+deb.sury.org+1, Copyright (c) 1999-2018, by Zend Technologies
-```
-
-Note: It's okay that it's still reporting `ubuntu16.04.1`. The important part is that PHP is now `7.2.*`.
-
 ## Server setup complete!
 At this point, you DigitalOcean Droplet has everything it needs to run a Laravel app. You're ready to move on to the next steps of deploying.
 
