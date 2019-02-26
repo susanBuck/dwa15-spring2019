@@ -188,9 +188,9 @@ If you see the following warning when installing Laravel via Composer...
 Cannot create cache directory [your home directory].composer/cache/repo/https---packagist.org/, or directory is not writable. Proceeding without cache.
 ```
 
-...it means that Composer lacks the appropriate permissions to write cache files to the `.composer/cache` directory. Despite this warning, the `create-project` command should still execute succesfully and no further action is necessary.
+...it means that Composer lacks the appropriate permissions to write cache files to the `.composer/cache` directory. Despite this warning, the `create-project` command should still execute successfully and no further action is necessary.
 
-However, it's useful to address the warning so that future invocations of Composer commands can take advantage of the cache making processes run faster. This appears to be an issue isolated to Mac users, and can be fixed by running the following command:
+However, it’s useful to address the warning so that future invocations of Composer commands can take advantage of the cache making processes run faster. This appears to be an issue isolated to Mac users, and can be fixed by running the following command:
 
 ```
 $ sudo chown -R $USER $HOME/.composer
