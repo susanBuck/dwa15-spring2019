@@ -20,7 +20,7 @@ $ which php
 
 ```xml
 $ php --version
-PHP 7.2.x (cli) (built: Jul 17 2018 11:26:48) ( NTS )
+PHP 7.2.x (cli)
 Copyright (c) 1997-2018 The PHP Group
 Zend Engine v3.2.0, Copyright (c) 1998-2018 Zend Technologies
 ```
