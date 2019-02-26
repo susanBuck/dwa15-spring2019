@@ -16,19 +16,19 @@ Frameworks like Laravel require many dependencies, and so it is built using **de
 For example, here's the dependency configuration for a new Laravel project:
 ```json
 "require": {
-     "php": "^7.1.3",
-     "fideloper/proxy": "^4.0",
-     "laravel/framework": "5.7.*",
-     "laravel/tinker": "^1.0"
- },
- "require-dev": {
-     "beyondcode/laravel-dump-server": "^1.0",
-     "filp/whoops": "^2.0",
-     "fzaninotto/faker": "^1.4",
-     "mockery/mockery": "^1.0",
-     "nunomaduro/collision": "^2.0",
-     "phpunit/phpunit": "^7.0"
- },
+    "php": "^7.1.3",
+    "fideloper/proxy": "^4.0",
+    "laravel/framework": "5.8.*",
+    "laravel/tinker": "^1.0"
+},
+"require-dev": {
+    "beyondcode/laravel-dump-server": "^1.0",
+    "filp/whoops": "^2.0",
+    "fzaninotto/faker": "^1.4",
+    "mockery/mockery": "^1.0",
+    "nunomaduro/collision": "^2.0",
+    "phpunit/phpunit": "^7.5"
+},
 ```
 
 The full library of packages available for management via Composer are found via [Packagist](http://packagist.org).
