@@ -30,7 +30,7 @@ C:\xampp\php\php.exe
 
 ```xml
 $ php -v
-PHP 7.2.9 (cli) (built: Aug 15 2018 23:29:19) ( ZTS MSVC15 (Visual C++ 2017) x86 )
+PHP 7.2.x (cli) 
 Copyright (c) 1997-2018 The PHP Group
 Zend Engine v3.2.0, Copyright (c) 1998-2018 Zend Technologies
 ```
