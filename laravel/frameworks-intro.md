@@ -63,6 +63,6 @@ What makes Laravel so popular?
 
 
 ## Laravel documentation
-* Docs: <http://laravel.com/docs>
-* API: <https://laravel.com/api/5.7>
+<http://laravel.com/docs>
+
 

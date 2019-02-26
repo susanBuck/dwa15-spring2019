@@ -30,7 +30,4 @@ Examples listed above are chosen because they *mostly* demonstrate the given app
 
 In this course, __we'll build our applications using Approach 1__, but know that the work we're doing has overlap with techniques you'd use when building a SPA, especially when programming the server-side API for your SPA.
 
-If you wish to explore SPA's after this course I recommend checking out the following:
-
-+ [Lumen](https://lumen.laravel.com) a &ldquo;light&rdquo; version of Laravel can be used as your server API
-+ [Vue](https://vuejs.org) JavaScript framework for building interfaces
+If you wish to explore SPA's after this course I recommend checking out [Vue](https://vuejs.org) which is a JavaScript framework commonly paired with Laravel.
