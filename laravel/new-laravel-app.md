@@ -18,7 +18,7 @@ Next, use the following `composer` command to generate a new Laravel project, sw
 Note: This command may take a minute or few to complete as it downloads all the necessary Laravel files.
 
 ```bash
-$ composer create-project laravel/laravel foobooks "5.7.*" --prefer-dist
+$ composer create-project laravel/laravel foobooks "5.8.*" --prefer-dist
 ```
 
 If you see warnings or errors after running this command, scroll down to see if your issue is listed in the __Troubleshooting__ section.
