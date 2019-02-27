@@ -9,9 +9,9 @@ These instructions are for Mac users; [for Windows instructions on setting up Co
 
 
 ## PHP from command line check
-In addition to running PHP on a server, you can also run PHP from command line. Composer uses PHP from command line, so we want to first get on the same page with *which* installation of PHP command line is using in order to understand what version of PHP we're using, what modules we have available, etc.
+In addition to running PHP on a server, you can also run PHP from command line. Composer uses PHP via the command line, so we want to first get on the same page with *which* installation of PHP our command line is using. Doing this will ensure we understand what version of PHP is being used and what modules we have available.
 
-You can see info about which php executable command line is using by running the following commands:
+You can see info about which PHP executable command line is using by running the following commands:
 
 ```xml
 $ which php
@@ -46,6 +46,8 @@ Before continuing confirm that:
 
 
 ## Installing Composer on Mac
+Now that your command line PHP is configured, we can move on to installing Composer.
+
 Move into your `/usr/local/bin` directory. This is a common location to put command line executable programs, so we'll install Composer here.
 
 ```xml
@@ -57,17 +59,13 @@ Note: On some versions of OSX the `/usr` directory does not exist by default. If
 sudo mkdir -p /usr/local/bin
 ```
 
-Once in `/usr/local/bin`, download and install `composer.phar`:
+Once in `/usr/local/bin`, run the following command to download the Composer installer and run it using php:
 
 ```bash
 $ curl -sS https://getcomposer.org/installer | sudo php
 ```
 
-What a .phar file is:
->> *The phar extension provides a way to put entire PHP applications into a single file called a &ldquo;phar&rdquo; (PHP Archive) for easy distribution and installation.* -[source](http://php.net/manual/en/intro.phar.php)
-
-After running the above command to download/install `composer.phar` you should see a message saying that Composer was successfully installed.
-
+After running the above command you should see a message saying that Composer was successfully installed:
 ```
 $ curl -sS https://getcomposer.org/installer | sudo php
 Password:
@@ -78,13 +76,13 @@ Composer successfully installed to: /usr/local/bin/composer.phar
 Use it: php composer.phar
 ```
 
-Once install is complete, to make calling Composer easier, rename `composer.phar` to `composer` using the `mv` (move) command:
+The resulting program (`composer.phar`) has a `.phar` ([PHP Archive](http://php.net/manual/en/intro.phar.php)) extension. We can shorten this by renaming it to just `composer`:
 
 ```bash
 $ sudo mv composer.phar composer
 ```
 
-Test it works:
+Now we have a simple, terse command to invoke Composer. Test it out:
 
 ```bash
 $ composer

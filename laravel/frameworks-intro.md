@@ -23,7 +23,7 @@ Included in a framework are libraries that power essential web application featu
 + Integration with 3rd party services (Facebook, Credit card processing, etc.)
 + Etc.
 
-By working with these existing fundamentals, it frees you up to focus on the functionality of *your* application.
+By working with these existing fundamentals, it frees you up to focus on the functionality of your application.
 
 ### Why use a framework
 * Avoid reinventing the wheel

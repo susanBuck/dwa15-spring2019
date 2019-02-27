@@ -83,7 +83,7 @@ As discussed when we were setting up Laravel on your local server, Laravel/the A
 
 This was a step we could skip locally because of how your local servers are configured, but it can't be skipped on your live servers. On your DigitalOcean server we need to make sure Apache has write access to these folders.
 
-To do this, we first identified that on DigitalOcean servers, Apache runs under a user called `www-data`.
+To do this, I first identified that Apache runs under a user called `www-data` on our DigitalOcean servers.
 
 Given that, make the user `www-data` own the `storage` directory and everything in it (`-R`):
 
@@ -101,29 +101,54 @@ Ref:
 + [Command Line : Extras : Permissions](/command-line/permissions.md)
 
 
-## Set up .env file on production
-Like the `vendors/` folder, the `.env` file is also listed in `.gitignore` so it's also excluded from version control. Because of this, you need to manually create a `.env` file on your live server in order for your application to work there.
+## Environment file (.env) on production
+Laravel applications need a configuration file called `.env` in order to run. This file contains configuration information specific to the environment (e.g. local or production) the application is running in.
 
-This can be done by copying the provided `.env.example` file to `.env`
+This `.env` file was created automatically on local when you first created the Laravel project but because it contains environment-specific configs, it’s excluded (`.gitignore`) from version control so it’s not synchronized across different environments.
+
+Given this, we need to manually create a `.env` file on production. This can be done by copying the provided `.env.example` file to `.env`
 
 ```xml
 $ cp .env.example .env
 ```
 
-Next, you need to generate a app key:
+Once your `.env` file is created you can edit it to customize the settings as appropriate for this production instance of your application. For example:
+
+```
+APP_NAME=Foobooks
+APP_ENV=production
+APP_KEY=
+APP_DEBUG=false
+APP_URL=http://foobooks.dwa15.me
+````
+
+There are many other settings in the `.env` file that we’ll revisit in future lectures; for now, just leave them as is.
+
+
+## APP_KEY
+In order for your Laravel application to load, it does need a unique hashed key for the `APP_KEY` setting in your `.env` file. This can be set using a built-in command line tool Laravel comes with called Artisan: 
 
 ```xml
 $ php artisan key:generate
 ```
 
-(If you're curious, you can `cat .env` to see the new key that was generated)
+After you run this command, re-open your `.env` file and you should see the `APP_KEY` is no longer blank.
 
-Later we'll discuss environments in full details and explain what exactly `.env` is doing and how it works. For now, just know that we need that `.env` file in order for Laravel to work.
+## Environment file (.env) on local 
+Switching back to the local version of your application for a moment, you can configure its `.env` file appropriately:
+
+```
+APP_NAME=Foobooks
+APP_ENV=local
+APP_KEY=[your random key that was set when you installed the app]
+APP_DEBUG=true
+APP_URL=http://foobooks.loc
+```
 
 
 
 ## Configure subdomain
-To access your Laravel application from the web, you'll want to set up a subdomain that points to it. For this you will follow [the same procedure](/servers-and-git/production-domain.md) you did to create `http://helloworld.yourdomain.com` and `http://p1.yourdomain.com`.
+To access your production application from the web, you'll want to set up a subdomain that points to it. For this you will follow [the same procedure](/servers-and-git/production-domain.md) you did to create `http://helloworld.yourdomain.com` and `http://p1.yourdomain.com`.
 
 Continuing with the foobooks example, I set up `http://foobooks.dwa15.me`
 

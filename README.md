@@ -61,4 +61,12 @@ If you have a suggestion regarding a particular topic (correction, typo, etc.), 
         + [Syntactic sugar](/php/syntactic-sugar.md)
         + [Garbage collection](/php/garbage-collection.md)
         + [Extending Form.php](/php/form.php-extending.md)
-        
++ Laravel
+    + [Preface](/laravel/preface.md)
+    + [Frameworks intro](/laravel/frameworks-intro.md)
+    + [Composer intro](/laravel/composer-intro.md)
+    + [Composer setup Mac](/laravel/composer-mac.md)
+    + [Composer setup Windows](/laravel/composer-windows.md)
+    + [New Laravel application](/laravel/new-laravel-app.md)
+    + [Prep DigitalOcean for Laravel](/laravel/prep-digital-ocean-for-laravel.md)
+    + [Deploy to DigitalOcean](/laravel/deploy-to-digital-ocean.md)      

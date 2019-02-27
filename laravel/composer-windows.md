@@ -10,11 +10,13 @@ Summary:
 
 
 ## PHP from command line check
-In addition to running PHP on a server, you can also run PHP from command line. Composer uses PHP from command line, so we want to first get on the same page with *which* installation of PHP command line is using in order to understand what version of PHP we're using, what modules we have available, etc.
+In addition to running PHP on a server, you can also run PHP from command line. Composer uses PHP via the command line, so we want to first get on the same page with *which* installation of PHP our command line is using. Doing this will ensure we understand what version of PHP is being used and what modules we have available.
 
 For __Windows__, we want PHP from command line to use XAMPP's installation of PHP, located at `c:\xampp\php\`
 
-This is accomplished by adding the above paths to your PATH variable. __For complete instructions on what the PATH variable is and how to edit it, read: [PATH Variables](/command-line/path.md).__
+This is accomplished by adding the `c:\xampp\php\` path to your computer’s *PATH variable*. 
+
+__For complete instructions on what the PATH variable is and how to edit it, read: [PATH Variables](/command-line/path.md).__
 
 Once you've completed the above linked instructions, you should confirm that...
 
@@ -45,11 +47,13 @@ Additional .ini files parsed:      (none)
 
 
 ## Installing Composer on Windows
+Now that your command line PHP is configured, we can move on to installing Composer.
+
 There's an installer for Composer on Windows, which you can download here: <https://getcomposer.org/Composer-Setup.exe>.
 
 Running through the installer, you should see the following screens.
 
-Make sure the `php.exe` path on the **second screen** matches the same XAMPP php.exe you set up in your PATH. This way you know what `php.exe` and `php.ini` Composer is using.
+Make sure the `php.exe` path on the **second screen** matches the same XAMPP `php.exe` you set up in your PATH.
 
 [Enlarge...](http://making-the-internet.s3.amazonaws.com/laravel-composer-install-on-windows@2x.png)
 <img src='http://making-the-internet.s3.amazonaws.com/laravel-composer-install-on-windows@2x.png' class='' style='max-width:1252px; width:100%' alt='Composer installation on Windows'>

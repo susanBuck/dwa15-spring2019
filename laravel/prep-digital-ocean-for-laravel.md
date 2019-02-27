@@ -80,13 +80,13 @@ Move into your bin directory where you'll install Composer:
 $ cd /usr/local/bin
 ```
 
-Use cURL to download Composer and then execute the resulting download with PHP:
+Use cURL to download the Composer installer and run it with PHP:
 
 ```bash
 $ curl -sS https://getcomposer.org/installer | sudo php
 ```
 
-Rename the composer executable to `composer` so it's convenient to invoke:
+Rename the resulting `composer.phar` executable  to `composer` so it's convenient to invoke:
 
 ```bash
 $ sudo mv composer.phar composer
