@@ -89,12 +89,3 @@ $timezone = config('app.timezone');
 
 [See a full list of available helper functions here...](https://laravel.com/docs/helpers)
 
-
-## Fix "Undefined class Route"
-The usage of facades are convenient, but they make it harder for PhpStorm to assist you when writing code in regards to auto-completion and providing context about the classes you're using. For example, here's PhpStorm flagging `Route` as an undefined class:
-
-<img src='https://s3.amazonaws.com/making-the-internet/laravel-undefined-class-route@2x.png' style='max-width:456px;' alt='Undefined class route'>
-
-The problem here is not that Route is undefined, it's that PhpStorm is unable to decipher *how* it's defined.
-
-To fix this issue, follow the notes here: [Make PhpStorm Laravel friendly](/laravel/laravel-and-phpstorm.md).
