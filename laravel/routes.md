@@ -1,5 +1,5 @@
 # Routes
-As we saw in the *Basic flow* notes, routes are declared in `routes/web.php` using Laravel's Router Class. For example:
+As we saw in the [*Basic flow*](/laravel/basic-flow.md) notes, your application’s web routes are declared in `routes/web.php` using Laravel's Route facade. For example:
 
 ```php
 Route::get('/books', function () {
@@ -14,7 +14,7 @@ In addition to `get`, the `Route` class also has methods for the following [HTTP
 3. PUT
 4. DELETE
 
-Looking at the [API documentation for Route's `get` method](https://laravel.com/api/5.7/Illuminate/Routing/Router.html#method_get), we see the following information:
+Looking at the [API documentation for Route's `get` method](https://laravel.com/api/5.8/Illuminate/Routing/Router.html#method_get), we see the following information:
 
 <img src='http://making-the-internet.s3.amazonaws.com/laravel-router-get-function-signature@2x.png' style='max-width:982px;' alt=''>
 
@@ -52,11 +52,11 @@ Next, test it again, but this time purposefully exclude the book title, `http://
 ### Optional route parameters
 Rather than throw an error, you can make the title route parameter *optional* by adding a question mark, e.g. `{title?}`.
 
-If you do this, you'll want to update the Closure's $title parameter so it defaults to an empty string, e.g. `$title = ''`
+If you do this, you'll want to update the Closure's $title parameter so it defaults to an empty string, e.g. `$title = ''`.
 
 Then, you can create a more useful response for the visitor as to why their request did not work.
 
-To demonstrate this, replace the above /book route with this updated version:
+To demonstrate this, replace the above `/book` route with this updated version:
 
 ```php
 Route::get('/books/{title?}', function($title = '') {
