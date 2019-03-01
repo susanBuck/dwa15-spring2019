@@ -34,7 +34,7 @@ If you're unfamiliar with closures...
 
 
 ## Route parameters
-You can make route URI's more flexible with route parameters. These parameters are indicated with curly brackets `{ }` and act as placeholders that will detect patterns in the URL.
+You can make route URI's more flexible with route parameters. These parameters are indicated with curly brackets `{ }` and act as placeholders that will detect patterns in the URL. When the routes are processed, the parameters in the URL are passed as arguments to the corresponding closure.
 
 For example:
 
@@ -52,7 +52,7 @@ Next, test it again, but this time purposefully exclude the book title, `http://
 ### Optional route parameters
 Rather than throw an error, you can make the title route parameter *optional* by adding a question mark, e.g. `{title?}`.
 
-If you do this, you'll want to update the Closure's $title parameter so it defaults to an empty string, e.g. `$title = ''`.
+If you do this, you'll want to update the closure's `$title` parameter so it defaults to an empty string, e.g. `$title = ''`.
 
 Then, you can create a more useful response for the visitor as to why their request did not work.
 
@@ -69,6 +69,34 @@ Route::get('/books/{title?}', function($title = '') {
 ```
 
 Again visit the URL omitting the title, `http://foobooks.loc/books/`, and note the difference.
+
+
+### Multiple route parameters
+
+Routes can accept multiple parameters, for example:
+
+```php
+Route::get('/books/{category}/{subcategory}', function($category, $subcategory) {
+    return 'Here are all the books in the category '.$category.' and '.$subcategory;
+});
+```
+
+Note that the arguments the closure will receive correspond to the order in which the route parameters are defined in the URI pattern. E.g. because the `{category}` route parameter is listed first, it’s the first argument passed to the closure (which is why it’s logical to name that parameter `$category` as well).
+
+The actual names you give the parameters is technically irrelevant - only the order matters - as is evidenced by this example:
+
+```php
+Route::get('/books/{category}/{subcategory}', function($x, $y) {
+    return 'Here are all the books in the category '.$x.' and '.$y;
+}); 
+```
+
+That being said, it’s best practice to be consistent with the names of your route parameters and the closure parameters to avoid confusion.
+
+
+
+
+
 
 
 ## Artisan routes
