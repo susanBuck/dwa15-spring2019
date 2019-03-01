@@ -29,9 +29,9 @@ Some observations about the generated controller:
 
 + __Location__
 	+ Controller class files are stored in `/app/Http/Controllers/`. This directory is [psr-4](http://www.php-fig.org/psr/psr-4/) loaded in `/composer.json`, so anything you put here will be readily available using the appropriate namespace.
-+ __Naming__
-	+ It's convention to suffix controller file names with `Controller` and use [upper CamelCase style](https://en.wikipedia.org/wiki/CamelCase#Variations_and_synonyms) (ex: `BookController`).
-	+ It's convention for controller names to be singular (e.g. `BookController`, not `BooksController`).
++ __Naming conventions__
+	+ Suffix controller file names with `Controller` and use [upper CamelCase style](https://en.wikipedia.org/wiki/CamelCase#Variations_and_synonyms) (ex: `BookController`).
+	+ Controllers are Classes, so they should be named singularly (e.g. `BookController`, not `BooksController`).
 + __Parent Controller class__
 	+ Controller classes should extend Laravel's `Controller` class, which also exists in `/app/Http/Controllers/`.
 	+ This base class is where you can put common logic shared by all your controllers, and it imports several Laravel convenience methods which we'll be taking advantage of.
