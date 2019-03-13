@@ -20,13 +20,12 @@ After you run the `composer require` command, if you open `composer.json`, you'l
 ```json
 "require-dev": {
     "barryvdh/laravel-debugbar": "^3.2",
-    "barryvdh/laravel-ide-helper": "^2.5",
     "beyondcode/laravel-dump-server": "^1.0",
     "filp/whoops": "^2.0",
     "fzaninotto/faker": "^1.4",
     "mockery/mockery": "^1.0",
     "nunomaduro/collision": "^2.0",
-    "phpunit/phpunit": "^7.0"
+    "phpunit/phpunit": "^7.5"
 },
 ```
 
@@ -65,24 +64,13 @@ This package is also a good example because it represents the kind of utility th
 To install `ianlchapman/pig-latin-translator`, instead of using `composer require` we'll update `composer.json` adding `"ianlchapman/pig-latin-translator": "^1.0"` to the `require` section. (Unlike `debugbar`, it's logical we would want to use this package on production, which is why it goes in `require`, not `require-dev`).
 
 ```json
-{
-    "name": "laravel/laravel",
-    "description": "The Laravel Framework.",
-    "keywords": ["framework", "laravel"],
-    "license": "MIT",
-    "type": "project",
-    "require": {
-        "php": "^7.1.3",
-        "fideloper/proxy": "^4.0",
-        "laravel/framework": "5.7.*",
-        "laravel/tinker": "^1.0",
-        "ianlchapman/pig-latin-translator": "^1.0"
-    },
-    "require-dev": {
-        "barryvdh/laravel-debugbar": "^3.2",
-        [...]
-    },
-}
+"require": {
+    "php": "^7.1.3",
+    "fideloper/proxy": "^4.0",
+    "laravel/framework": "5.8.*",
+    "laravel/tinker": "^1.0",
+    "ianlchapman/pig-latin-translator": "1.0.0"
+},
 ```
 
 After adding this line, run `composer update` to have Composer download that package.

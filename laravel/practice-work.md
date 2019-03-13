@@ -15,7 +15,7 @@ Where should you run this command to test it out? You have a few options, descri
 ## Option 1: Practice route
 You can create a temporary practice route:
 
-```py
+```php
 Route::get('/practice', function () {
     dump(config('mail.driver'));
 });
