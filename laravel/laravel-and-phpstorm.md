@@ -1,35 +1,55 @@
-# Make PhpStorm Laravel friendly
+# Make PhpStorm more Laravel friendly
 
-Both PhpStorm and Laravel are robust and complex systems that attempt to make developer's lives easier by providing an abundance of tools and features for writing software.
+Both PhpStorm and Laravel are robust and complex systems that attempt to make developer’s lives easier by providing an abundance of tools and features for writing software.
 
-Most of the time, these systems work well together and you get the advantage of Laravel's advanced yet expressive featureset with the support of PhpStorm's rich functionality (code completion, inspections, etc.)
+Most of the time, these systems work well together and you get the advantage of Laravel’s advanced yet expressive featureset with the support of PhpStorm's rich functionality (code completion, inspections, etc.)
 
 However, sometimes the two systems are not 100% compatible and extra configuration is needed to make them work together more seamlessly. The following notes explain steps to make this happen.
 
 
 ## PhpStorm Laravel Plugin
-Install a plugin called *Laravel Plugin* in PhpStorm (via *Preferences* : *Plugins*).
+
+This [Laravel Plugin](https://plugins.jetbrains.com/plugin/7532-laravel-plugin) for PhpStorm adds the following features:
+
++ PHP/Route: Controller completion and goto
++ PHP/Route: Router::resource references
++ PHP/Route: detect route names on "as" key
++ PHP/View: completion and goto for view templates
++ PHP/Config: "providers" class array completion
++ PHP/Config: Config key indexer, completion and goto
++ PHP/Translation: Translation key indexer, completion and goto
++ PHP: Service dic
++ Blade: extends, include and Php usage linemarker
++ Blade: section, yield, stack overwrite and implements linemarker
++ Blade: Improvements in Blade template name completion and navigation
++ Blade: trans directive
++ Template: Index for Php usage
+
+To install this plugin, search for it in your PhpStorm plugin settings (via *Preferences/Settings* : *Plugins*).
 
 Once installed, it should prompt you to enable the plugin whenever it detects you've open a Laravel project.
 
-If it doesn't, you can manually enable it via *Preferences* : *Languages & Frameworks* : *PHP* : *Laravel* : *Enable plugin for this project*.
+Alternatively, you can manually enable it via *Preferences/Settings* : *Languages & Frameworks* : *PHP* : *Laravel* : *Enable plugin for this project*.
 
 <img src='https://s3.amazonaws.com/making-the-internet/laravel-enable-plugin@2x.png' style='max-width:1000px;' alt='Enable Laravel Plugin'>
 
 
-For a list of features this plugin adds, [see its info page](https://plugins.jetbrains.com/plugin/7532-laravel-plugin).
-
 ## laravel-ide-helper Package
 
->> "This package generates a file that your IDE understands, so it can provide accurate autocompletion. Generation is done based on the files in your project, so they are always up-to-date." -[ref](https://github.com/barryvdh/laravel-ide-helper)
+When using Laravel facades (e.g. `Route`) you'll notice PhpStorm flagging the classes as undefined:
 
-Install the package [barryvdh/laravel-ide-helper](https://github.com/barryvdh/laravel-ide-helper):
+<img src='https://s3.amazonaws.com/making-the-internet/laravel-undefined-route-facade@2x.png' style='max-width:500px;' alt=''>
 
+The problem is not that the class isn’t defined, it’s that PhpStorm doesnt understand *how* Laravel has defined the class.
+
+To fix this, we can install the package [barryvdh/laravel-ide-helper](https://github.com/barryvdh/laravel-ide-helper) which will provide meta information to PhpStorm about the class structure of your app, preventing PhpStorm from flagging certain methods as unavailable.
+
+Install this package in `require-dev` with the following command:
 ```
 $ composer require --dev barryvdh/laravel-ide-helper
 ```
 
-In `app/Providers/AppServiceProvider.php` within the `register` method, add this code to register the ide-helper (on non-production environments only):
+Next, in `app/Providers/AppServiceProvider.php` within the `register` method, add this code to register the ide-helper (on non-production environments only):
 
 ```php
 if ($this->app->environment() !== 'production') {
@@ -51,9 +71,11 @@ Next, in `composer.json` in the `scripts` section, add the following:
 Like so:
 <img src='https://s3.amazonaws.com/making-the-internet/laravel-post-update-cmd@2x.png' style='max-width:590px;' alt=''>
 
-This specifies a series of `ide-helper` commands to be automatically run whenever you run `composer update`. As a result of these commands, 2 new files will be generated in your application: `_ide_helper.php` and `ide_helper_models.php`. These files provide meta information to PhpStorm about the class structure of your app, which prevents PhpStorm from flagging certain methods as unavailable.
+The above step specifies a series of `php artisan ide-helper` commands to be automatically run whenever you run `composer update`. 
 
-Both these files can be added/committed in version control.
+As a result of these commands, 2 new files will be generated in your application: `_ide_helper.php` and `ide_helper_models.php`. These files provide meta information to PhpStorm that it can use to understand the class structure of your app. Both these files can be added/committed in version control.
+
+
 
 ## Resolve *Validate method not found in Illuminate\Http\Request* flag
 
