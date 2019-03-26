@@ -102,7 +102,7 @@ Studying the form construction....
 
 ...we can see the form is configured to submit with GET (method) via the route `/books/search-process` (action).
 
-Thus, if you visit `/search`, enter a title (e.g. *the great gatsby*), hit Submit, it should lead you to a URL like `http://foobooks.loc/books/search-process?searchTerm=the+great+gatsby`.
+Thus, if you visit `/search`, enter a title (e.g. *the great gatsby*), click *Search*, it should lead you to a URL like `http://foobooks.loc/books/search-process?searchTerm=the+great+gatsby`.
 
 If it does, it means everything is set up correctly thus far.
 
@@ -157,7 +157,7 @@ public function searchProcess(Request $request) {
 ```
 
 
-After updating the `search` method, refresh your form, enter some data and hit Submit. Study the code and results to learn about some of the features of the Request object.
+After updating the `search` method, refresh your form, enter some data and click the *Search* button. Study the code and results to learn about some of the features of the Request object.
 
 To see a full list of methods available to Request, refer to the [docs on Requests](https://laravel.com/docs/requests#accessing-the-request).
 
@@ -227,14 +227,13 @@ public function searchProcess(Request $request) {
 
 
 ## Show the form, post-processing
-Next, we want to update the `search` method so it will extract `searchTerm`, `caseSensitive`, and `searchResults` from the session (if it's available)
-and make it available to the view so we can display any results. This can be done via the `$request->session()` method.
+Next, we want to update the `search` method so it will extract `searchTerm`, `caseSensitive`, and `searchResults` from the session (if it's available) and make it available to the view so we can display any results. One way to do this is via the `$request->session()` method.
 
 ```php
 /**
  * GET
- * /books/search-process
- * Process the form to search for a book
+ * /books/search
+ * Show the form to search for a book
  */
 public function search(Request $request)
 {
@@ -267,8 +266,6 @@ In `search.blade.php`, right after the form, add this code:
     @endif
 @endif
 ```
-
-
 
 
 ## Finishing touches: Retain data in inputs
