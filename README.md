@@ -87,3 +87,6 @@ If you have a suggestion regarding a particular topic (correction, typo, etc.), 
     + [Views & Blade](/laravel/views-and-blade.md)
     + [Blade templates](/laravel/blade-templates.md)
     + [Blade cheat sheet](/laravel/blade-cheat-sheet.md)
+    + [Forms GET](/laravel/forms-get.md)
+    + [Forms POST](/laravel/forms-post.md)
+    + [Validation](/laravel/validation.md)

@@ -23,7 +23,7 @@ In the following steps, I'll provide the necessary code, which will be explained
         <label for='title'>* Title</label>
         <input type='text' name='title' id='title'>
 
-        <label for='author_id'>* Author</label>
+        <label for='author'>* Author</label>
         <input type='text' name='author' id='author'>
 
         <label for='published_year'>* Published Year (YYYY)</label>
