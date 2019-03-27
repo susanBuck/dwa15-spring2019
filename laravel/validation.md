@@ -76,10 +76,17 @@ Read the docs page [Working with Error Messages](https://laravel.com/docs/valida
 In the above example, we only saw two rules: `required` and `min`. There are currently 62 total validation rules provided for you from Laravel&mdash; you can read about them here: [Validation: Available Validation Rules](http://laravel.com/docs/validation#available-validation-rules).
 
 
-## Retaining form data when validation fails
+## Retaining old form data
 When validation fails and the visitor is redirected back to the form, the form data from the request is automatically flashed to the session for a single page request. You can access this data in your view via Laravel's [`old`](https://laravel.com/docs/helpers#method-old) helper method in order to pre-fill your inputs.
 
 For example:
 ```html
 <input type='text' name='title' id='title' value='{{ old('title') }}'>
+```
+
+Note that the form’s values are only accessible via `old` if it’s the validation method that is initiating the redirect (as a result of failed validation). 
+
+If you do your own redirect and wish to take advtange of the `old` method, you have to include a `withInput` method as part of your redirect, e.g.:
+```php
+return redirect('/books/create')->withInput();
 ```
