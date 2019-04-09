@@ -86,7 +86,7 @@ For example:
 
 Note that the form’s values are only accessible via `old` if it’s the validation method that is initiating the redirect (as a result of failed validation). 
 
-If you do your own redirect and wish to take advtange of the `old` method, you have to include a `withInput` method as part of your redirect, e.g.:
+If you do your own redirect and wish to take advantage of the `old` method, you have to include a `withInput` method as part of your redirect, e.g.:
 ```php
 return redirect('/books/create')->withInput();
 ```
