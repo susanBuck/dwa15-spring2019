@@ -80,7 +80,7 @@ class CreateBooksTable extends Migration
     public function up()
     {
         Schema::create('books', function (Blueprint $table) {
-            $table->increments('id');
+            $table->bigIncrements('id');
             $table->timestamps();
         });
     }
@@ -119,17 +119,16 @@ Modify the `up` method so it looks like this:
 public function up()
 {
     Schema::create('books', function (Blueprint $table) {
-        # Increments method will make a Primary, Auto-Incrementing field.
-        # Most tables start off this way
-        $table->increments('id');
+        # Create a Primary, Auto-Incrementing column named `id`
+        $table->bigIncrements('id');
 
         # This generates two columns: `created_at` and `updated_at` to
         # keep track of changes to a row
         $table->timestamps();
 
-        # The rest of the fields...
+        # The rest of the columns...
         $table->string('title');
-        $table->string('author')->nullable(); # Example of a modifier
+        $table->string('author')->nullable(); # Example of a column modifier
         $table->year('published_year');
         $table->string('cover_url');
         $table->string('purchase_url');
