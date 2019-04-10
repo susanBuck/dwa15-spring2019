@@ -25,7 +25,7 @@ Ref: [Index Lengths & MySQL / MariaDB](https://laravel.com/docs/migrations#creat
 
 ## Migrations
 
->> “Migrations are like version control for your database” -<https://laravel.com/docs/migrations>_
+>> “Migrations are like version control for your database” -<https://laravel.com/docs/migrations>
 
 With your application's local database created and your connection to that database confirmed, it's time to build your tables.
 
