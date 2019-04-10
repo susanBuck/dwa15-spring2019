@@ -25,6 +25,8 @@ Ref: [Index Lengths & MySQL / MariaDB](https://laravel.com/docs/migrations#creat
 
 ## Migrations
 
+>> “Migrations are like version control for your database” -<https://laravel.com/docs/migrations>_
+
 With your application's local database created and your connection to that database confirmed, it's time to build your tables.
 
 Rather than building tables with raw SQL queries or using a tool like phpMyAdmin, we'll use Laravel migrations.
@@ -135,7 +137,7 @@ public function up()
 }
 ```
 
-Note how the Laravel `Schema` component is used to create the `books` table.
+Note how the Laravel `Schema` class is used to create the `books` table.
 
 The above code includes comments for the `Schema` methods we're using, but be sure to read the [Schema Documentation](http://laravel.com/docs/migrations#creating-tables) for full details.
 
