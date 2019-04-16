@@ -48,7 +48,7 @@ This is what will give the Book class all the functionality provided by Eloquent
 
 
 
-## Eloquent Requirements
+## Eloquent Expectations
 In order for Eloquent to work its magic, there are a 3 conventions we should follow:
 
 __Convention 1) Model/table naming__
