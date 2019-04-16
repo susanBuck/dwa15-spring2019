@@ -51,7 +51,7 @@ This is what will give the Book class all the functionality provided by Eloquent
 ## Eloquent Requirements
 In order for Eloquent to work its magic, there are a 3 conventions we should follow:
 
-__ Convention 1) Model/table naming__
+__Convention 1) Model/table naming__
 
 A Model's class name should be the singular version of the corresponding table name, and it should be capitalized.
 
@@ -65,11 +65,11 @@ So...
 
 (For words with atypical conversions between plural and singular versions (e.g. mouse => mice), you can use the [str_plural](https://laravel.com/docs/helpers#method-str-plural) and [str_singular](https://laravel.com/docs/helpers#method-str-singular) helper methods to figure out what words to use.)
 
-__ Convention 2) Id field__
+__Convention 2) Id field__
 
 Tables should have a __Auto Incremented__, __Primary Key__ field named `id`. We discussed the special `id` field when we set up our migrations, so your `books` table already meets this criteria.
 
-__ Convention 3) Timestamps__
+__Convention 3) Timestamps__
 
 Tables should have `created_at` and `updated_at` fields. Again, this was something we covered during migrations, so your `books` table should be all set.
 
