@@ -60,8 +60,9 @@ $query->where('a', '=', 1)
 
 ### Ordering
 ```php
-->orderBy('id','DESC')
-->orderBy(DB::raw('RAND()'))
+->orderBy('id') // defaults to ASC order
+->orderBy('id', 'DESC') 
+->orderByDesc('id') // Alias for the above
 ->latest() // on 'created_at' column
 ->latest('column')
 ->oldest() // on 'created_at' column
