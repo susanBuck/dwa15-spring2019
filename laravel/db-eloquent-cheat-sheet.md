@@ -73,6 +73,7 @@ $query->where('a', '=', 1)
 
 ### Create
 ```php
+->save()
 ->insert(['email' => 'john@example.com', 'votes' => 0])
 ->insert([   
     ['email' => 'taylor@example.com', 'votes' => 0],
@@ -81,24 +82,7 @@ $query->where('a', '=', 1)
 ->insertGetId(['email' => 'john@example.com', 'votes' => 0]) // insert and return id
 ```
 
-### Update
-```php
-->update(array('email' => 'john@example.com'))
-->update(array('column' => DB::raw('NULL')))
-->increment('column')
-->decrement('column')
-->touch() //update timestamp
-```
-  
-### Delete
-```php
-->delete()
-->forceDelete() // when softdeletes enabled
-->destroy($ids) // delete by array of primary keys
-->roles()->detach() //delete from pivot table: associated by 'belongsToMany'
-```
-  
-### Fetch
+### Fetch/Read
 ```php
 ->find($id)
 ->find($id, ['col1','col2'])
@@ -114,6 +98,23 @@ $query->where('a', '=', 1)
 ->lists('column')->implode('column', ',') // comma separated values of a column
 ->pluck('column') // Pluck a single column's value from the first result of a query.
 ->value('column') // Get a single column's value from the first result of a query.
+```
+
+### Update
+```php
+->update(['email' => 'john@example.com'])
+->update(['column' => DB::raw('NULL')])
+->increment('column')
+->decrement('column')
+->touch() // update timestamp
+```
+  
+### Delete
+```php
+->delete()
+->forceDelete() // when softdeletes enabled
+->destroy($ids) // delete by array of primary keys
+->roles()->detach() //delete from pivot table: associated by 'belongsToMany'
 ```
   
 ### Aggregate
