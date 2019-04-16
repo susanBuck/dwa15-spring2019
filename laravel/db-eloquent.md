@@ -164,29 +164,27 @@ You'll see both styles in examples and documentation.
 
 
 ## Query Structure
-Now that we've seen two examples, let’s dig deeper into the structure of Eloquent queries.
+Now that we’ve seen two examples, let’s dig deeper into the structure of Eloquent queries.
 
-An Eloquent query is made up of...
+An Eloquent query can typically be broken down into two parts which I'll refer to using the following terminology:
 
-1. __constraint method(s)__ (optional) to filter the query
-2. __fetch method__ to run the query and determine what results to get back
-
-<br>
-Constraint methods should always come before fetch methods.
+1. __design method(s):__ These methods dictate *what* results your query will return. Design methods can be chained together.
+2. __an execution method:__ This method will dictate *how* the query will be executed, and will always come after any design methods.
 
 <br>
 <img src='http://making-the-internet.s3.amazonaws.com/laravel-eloquent-constraint-fetch@2x.png' style='max-width:865px;' alt=''>
 <br>
 
-Here are examples showing a combination of constraint and fetch methods:
+Here's a [cheat sheet of common design and execution methods](/laravel/db-eloquent-cheat-sheet.md) you’ll use to build your Eloquent queries.
 
+And here are examples showing several combinations of design and execution methods:
 
 
 ### Example A.
 ```php
 # Get only books published after 1950
-#   `where` is the constraint method
-#   `get` is the fetch method
+#   `where` is the design method
+#   `get` is the execution method
 $results = Book::where('published_year', '>', 1950)->get();
 dump($results->toArray()); # Study the results
 ```
@@ -194,8 +192,8 @@ dump($results->toArray()); # Study the results
 ### Example B.
 ```php
 # Get only books that were authored by F. Scott Fitzgerald
-    # `where` is the constraint method
-    # `get` is the fetch method
+    # `where` is the design method
+    # `get` is the execution method
 $results = Book::where('author', '=', 'F. Scott Fitzgerald')->get();
 dump($results->toArray()); # Study the results
 ```
@@ -203,8 +201,8 @@ dump($results->toArray()); # Study the results
 ### Example C.
 ```php
 # Get the *first* book in the table that was authored by F. Scott Fitzgerald
-    # `where` & `orderBy` are the constraint methods
-    # `first` is the fetch method
+    # `where` & `orderBy` are the design methods
+    # `first` is the execution method
 $results = Book::where('author', '=', 'F. Scott Fitzgerald')->orderBy('created_at')->first();
 dump($results->toArray()); # Study the results
 ```
@@ -212,8 +210,8 @@ dump($results->toArray()); # Study the results
 ### Example D.
 ```php
 # Get only books that were published after 1950 *and* authored by F. Scott Fitzgerald
-    # `where` is the constraint method, and it's used twice
-    # `get` is the fetch method
+    # `where` is the design method, and it's used twice
+    # `get` is the execution method
 $results = Book::where('published_year', '>', 1950)->where('author', '=', 'F. Scott Fitzgerald')->get();
 dump($results->toArray()); # Study the results
 ```
@@ -221,8 +219,8 @@ dump($results->toArray()); # Study the results
 ### Example E.
 ```php
 # Get all the books
-    # There is no constraint method
-    # `all` is the fetch method
+    # There is no design method
+    # `all` is the execution method
 $results = Book::all();
 dump($results->toArray()); # Study the results
 ```
@@ -271,13 +269,13 @@ if (!$book) {
 
 
 ## Resources & Practice
-The combinations of constraints and fetch methods you can use are practically limitless, and building complex queries takes practice.
+The combinations of Eloquent design and execution methods you can use are practically limitless, and building complex queries takes practice.
 
 Knowing that, here are some resources to study:
 
 + Start by bookmarking and studying [these query examples...](/laravel/db-query-examples.md).
 + Skim the
-[API Docs on query methods](https://laravel.com/api/5.7/Illuminate/Database/Query/Builder.html) to see *all* the methods available to you.
+[API Docs on query methods](https://laravel.com/api/5.8/Illuminate/Database/Query/Builder.html) to see *all* the methods available to you.
 + And, of course, refer to the [Laravel Eloquent Documentation](https://laravel.com/docs/eloquent).
 
 Armed with this information, write queries to accomplish the following...
