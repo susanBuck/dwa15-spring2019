@@ -103,6 +103,8 @@ Next, we want to grant privileges to our new user, `dwa`:
 GRANT ALL PRIVILEGES ON * . * TO 'dwa'@'localhost';
 ```
 
+*Note: we’re being very liberal here allowing the `dwa` user full access (`ALL PRIVILEGES`) to all databases (` * . * `). In a real-world application, you’ll want to be more restrictive for security purposes. You can read more about MySQL [privileges here](https://dev.mysql.com/doc/refman/8.0/en/privileges-provided.html).*
+
 Next, run this command to make these changes take effect:
 
 ```
@@ -126,7 +128,7 @@ $ cd /var/www/html/foobooks/
 $ nano .env
 ```
 
-In your .env file add the following configs (update the `DB_USERNAME` and `DB_PASSWORD` to match whatever you used in the previous step):
+In your .env file, update your `DB_` settings so they look like the following (change the `DB_USERNAME` and `DB_PASSWORD` to match whatever you used in the previous step):
 
 ```xml
 DB_DATABASE=foobooks
@@ -210,6 +212,14 @@ DROP DATABASE foobooks;
 CREATE DATABASE foobooks;
 ```
 
+## Summary
+
+One time setup steps:
++ Obtain `root` MySQL password so you can access the MySQL command line tool
++ Using the MySQL command line tool, create a `dwa` MySQL user that can access your databases from your applications
+
+To be repeated for each application you create:
++ Use the MySQL command line tool to create a new database for that specific project.
 
 ## Troubleshooting
 

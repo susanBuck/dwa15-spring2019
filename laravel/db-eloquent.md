@@ -65,13 +65,13 @@ So...
 
 (For words with atypical conversions between plural and singular versions (e.g. mouse => mice), you can use the [str_plural](https://laravel.com/docs/helpers#method-str-plural) and [str_singular](https://laravel.com/docs/helpers#method-str-singular) helper methods to figure out what words to use.)
 
-__Convention 2) Id field__
+__Convention 2) Id column__
 
-Tables should have a __Auto Incremented__, __Primary Key__ field named `id`. We discussed the special `id` field when we set up our migrations, so your `books` table already meets this criteria.
+Tables should have a __Auto Incremented__, __Primary Key__ column named `id`. We discussed the special `id` column when we set up our migrations, so your `books` table already meets this criteria.
 
 __Convention 3) Timestamps__
 
-Tables should have `created_at` and `updated_at` fields. Again, this was something we covered during migrations, so your `books` table should be all set.
+Tables should have `created_at` and `updated_at` columns. Again, this was something we covered during migrations, so your `books` table should be all set.
 
 These 3 conventions can be overridden (as described in the documentation), but we’ll avoid straying off convention as much as possible. 
 

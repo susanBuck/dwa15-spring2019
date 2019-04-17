@@ -1,5 +1,5 @@
-# Eloquent Cheat Sheet
-This is a summary of commonly used methods for designing and executing Eloquent queries. This is not a comprehensive list - refer to the documentation for all the methods and more details.
+# Query Cheat Sheet
+This is a summary of commonly used methods for designing and executing queries. This is not a comprehensive list - refer to the documentation for all the methods and more details.
 
 ## Design the query
 
