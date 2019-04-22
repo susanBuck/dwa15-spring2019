@@ -13,7 +13,7 @@ Post::find($id); # Find a post
 Post::delete($id); # Delete a post
 ```
 
-You can also define relationships between Models (tables) and easily query for related dated, e.g.:
+You can also define relationships between Models (tables) and easily query for related date, e.g.:
 
 ```php
 Post::with('comments')->find($id);
