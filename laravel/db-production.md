@@ -214,12 +214,12 @@ CREATE DATABASE foobooks;
 
 ## Summary
 
-One time setup steps:
+One time steps:
 + Obtain `root` MySQL password so you can access the MySQL command line tool
 + Using the MySQL command line tool, create a `dwa` MySQL user that can access your databases from your applications
 
 To be repeated for each application you create:
-+ Use the MySQL command line tool to create a new database for that specific project.
++ Use the MySQL command line tool to create a new database for that specific project
 
 ## Troubleshooting
 
