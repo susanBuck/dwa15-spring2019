@@ -11,9 +11,9 @@
 ## Laravel database configuration
 In order for your application to connect to your local MySQL server and database, Laravel needs your MySQL host name, username, and password, as well as the name of the database you want to connect to.
 
-These configurations are set in your Laravel project's `/config/database.php` file.
+These configurations come from your Laravel project's `/config/database.php` file.
 
-For our examples, because we're using MySQL databases, we want to find `mysql` in the `connections` array:
+For our examples, because we're using MySQL databases, we want to find `mysql` in the `connections` array in `/config/database.php`:
 
 ```php
 'mysql' => [
@@ -32,10 +32,11 @@ For our examples, because we're using MySQL databases, we want to find `mysql` i
     ],
 ```
 
-Note how the `env()` method is used, making it easy to set separate database configurations for your different environments. This is important, because you'll be using two different databases&mdash; one locally and one on production (DigitalOcean).
+Note how the `env()` method is used for several of the settings (e.g. `host`, `username`, `password`) making it easy to set separate database configurations for your different environments. This is important, because you'll be using two different databases&mdash; one locally and one on production (DigitalOcean). 
 
-MAMP Users: Open your local `/.env` file and set the following environment settings:
+Because of this, we'll need to make edits to our local `.env` file to configure the database connection.
 
+__MAMP users__, update your local `.env` file with the following settings:
 ```
 DB_HOST=localhost
 DB_PORT=3306
@@ -46,7 +47,7 @@ DB_PASSWORD=root
 
 (FYI The values for host, username, and password are found on the MAMP start page at <http://localhost/MAMP>)
 
-__XAMPP users__, your configs will look like this:
+__XAMPP users__, update your local `.env` file with the following settings:
 ```xml
 DB_HOST=localhost
 DB_PORT=3306
