@@ -5,13 +5,13 @@ The following is a rough outline of the modifications I'll make to Foobooks in W
 __This should not be considered a stand-alone document; for full details please refer to the lecture video and the Foobooks code source.__
 
 ## View all books
-- `BookController@index`
-- `/resources/views/books/index.blade.php`
-- `/resources/views/books/_book.blade.php`
+- [`BookController@index`](https://github.com/susanBuck/foobooks/blob/master/app/Http/Controllers/BookController.php#L14)
+- [`/resources/views/books/index.blade.php`](https://github.com/susanBuck/foobooks/blob/master/resources/views/books/index.blade.php)
+- [`/resources/views/books/_book.blade.php`](https://github.com/susanBuck/foobooks/blob/master/resources/views/books/_book.blade.php)
 
 ## View individual book
-- `BookController@show`
-- `/resources/views/books/show.blade.php`
+- [`BookController@show`](https://github.com/susanBuck/foobooks/blob/master/app/Http/Controllers/BookController.php#L31)
+- [`/resources/views/books/show.blade.php`](https://github.com/susanBuck/foobooks/blob/master/resources/views/books/show.blade.php)
 
 ## Add a book
 In `BookController.php` update `store` to save the book to the database:
@@ -132,3 +132,4 @@ public function update(Request $request, $id)
 
 ## Delete a book
 Try this one on your own. I'll share an example solution next week.
+
