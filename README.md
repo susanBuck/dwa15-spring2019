@@ -10,6 +10,7 @@ If you have a suggestion regarding a particular topic (correction, typo, etc.), 
 + Misc
     + [Markdown](/misc/markdown.md)
     + [PhpStorm](/misc/phpstorm.md)
+    + [Make PhpStorm Laravel Friendly](/laravel/laravel-and-phpstorm.md)
     + [Code style](/misc/code-style.md)
     + [Interface](/misc/interface.md)
 + Command Line
