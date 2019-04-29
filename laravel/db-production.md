@@ -142,7 +142,7 @@ Next, run `php artisan config:clear` to ensure Laravel detects these changes to 
 
 With the above steps complete, you next want to confirm these credentials work.
 
-If you still have the [/debug route](https://github.com/susanBuck/dwa15-fall2017/blob/master/03_Laravel/24_Local_database_config.md#test-your-connection) from when you were configuring your local database connection, you can use that again to confirm your live database connection.
+If you still have the [/debug route](/laravel/db-local-config.md#test-your-connection) from when you were configuring your local database connection, you can use that again to confirm your live database connection.
 
 
 

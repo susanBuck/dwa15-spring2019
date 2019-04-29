@@ -10,6 +10,7 @@ If you have a suggestion regarding a particular topic (correction, typo, etc.), 
 + Misc
     + [Markdown](/misc/markdown.md)
     + [PhpStorm](/misc/phpstorm.md)
+    + [Make PhpStorm Laravel Friendly](/laravel/laravel-and-phpstorm.md)
     + [Code style](/misc/code-style.md)
     + [Interface](/misc/interface.md)
 + Command Line
@@ -103,7 +104,10 @@ If you have a suggestion regarding a particular topic (correction, typo, etc.), 
     + [Production database setup](/laravel/db-production.md)
     + [Collections](/laravel/db-collections.md)
     + [Foobooks: CRUD](/laravel/foobooks-week12.md)
+<<<<<<< HEAD
     + [Relationships: One to Many](/laravel/db-one-to-many.md)
     + [Foobooks: One to Many](/laravel/foobooks-week-13a.md)
     + [Relationships: Many to Many](/laravel/db-many-to-many.md)
     + [Foobooks: Many to Many](/laravel/foobooks-week-13b.md)
+=======
+>>>>>>> 498be0c943b3c7f50e286d84bc983c9714a703c8
