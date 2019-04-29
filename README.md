@@ -103,3 +103,7 @@ If you have a suggestion regarding a particular topic (correction, typo, etc.), 
     + [Production database setup](/laravel/db-production.md)
     + [Collections](/laravel/db-collections.md)
     + [Foobooks: CRUD](/laravel/foobooks-week12.md)
+    + [Relationships: One to Many](/laravel/db-one-to-many.md)
+    + [Foobooks: One to Many](/laravel/foobooks-week-13a.md)
+    + [Relationships: Many to Many](/laravel/db-many-to-many.md)
+    + [Foobooks: Many to Many](/laravel/foobooks-week-13b.md)
