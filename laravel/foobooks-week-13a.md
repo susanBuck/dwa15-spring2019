@@ -47,24 +47,6 @@ $book->author_id = $request->author_id;
 ```
 
 
-## Custom model methods
-We'll want to do the same thing on the *Edit* page.
-
-Rather than duplicate the &ldquo;get authors for dropdown&rdquo; code, we can extract it out of the controller and add it as a method to the `Author` model:
-
-```php
-# app/Author.php
-public static function getForDropdown() {
-    return self::orderBy('last_name')->select(['id', 'first_name', 'last_name'])->get();
-}
-```
-
-Then in `BookController@edit`:
-```
-$authors = Author::getForDropdown();
-```
-
-
 ## Validation
 ```php
 $this->validate($request, [

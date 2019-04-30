@@ -1,4 +1,4 @@
-# Database Relationships
+# Database relationships
 A web application typically contains multiple database tables, and those tables often relate to one another in some way.
 
 For insight into this, consider the following Foobooks database schema, outlining the table design we'll be working towards.
