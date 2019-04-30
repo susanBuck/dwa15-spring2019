@@ -1,4 +1,4 @@
-## Database Relationships
+# Database Relationships
 A web application typically contains multiple database tables, and those tables often relate to one another in some way.
 
 For insight into this, consider the following Foobooks database schema, outlining the table design we'll be working towards.
@@ -16,16 +16,17 @@ Each blue arrow represents a relationship between two tables.
 There are 6 common relationship types:
 
 + One To One
-+ One To Many
-+ Many To Many
++ **One To Many**
++ **Many To Many**
 + Has Many Through
 + Polymorphic Relations
 + Many To Many Polymorphic Relations
 
 You can read about all the relationships here: [Docs: Eloquent Relationships](http://laravel.com/docs/eloquent-relationships).
 
-In these notes, we'll start with the __One To Many__ relationship.
+In this course, we’ll focus on the *One To Many* and *Many To Many* relationship, starting in this note set with the *One To Many* relationship.
 
+# One to Many relationship
 
 ## Authors
 Continuing with the Foobooks example, we can expand on our database design to include an `authors` table.
