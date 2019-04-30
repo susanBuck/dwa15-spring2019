@@ -23,7 +23,7 @@ Post::with('comments')->find($id);
 Another database tool Laravel provides is the Query Builder, which also provides a fluent interface to create and run database queries, but it's more similar to raw SQL queries and is not designed around Model objects.
 
 Examples:
-``````
+```
 DB::table('posts')->get(); # Get all the posts
 DB::table('posts')->where('id', $id)->first(); # Find a post
 DB::table('posts')->where('id', $id)->delete(); # Delete a post
