@@ -1,44 +1,39 @@
 # Foobooks: Many to Many
 
-The following is a __rough outline__ of modifications I'll make to Foobooks during Week 13's lectures.
+The following is a __rough outline__ of modifications I'll make to Foobooks during Week 13’s lectures.
 
 __This should not be considered a stand-alone document; for full details please refer to the lecture video and the Foobooks code source.__
 
 
 ## Tags in the *Edit Book* feature
-We have everything set up for a tags feature&mdash; migrations, seeders, models&mdash; now let's look at how we'd implement tags.
+We have everything set up for a tags feature&mdash; migrations, seeders, models&mdash; now let’s look at how we’d implement tags.
 
 Starting with the *Edit Book* feature, we need a way to associate tags with books. For authors, this was done with a dropdown which worked because each book can have only *one* author.
 
-Each book can have *many* tags, though, so a dropdown won't do. Instead, let's show all possible tags with checkboxes. Example of what we're aiming for:
+Each book can have *many* tags, though, so a dropdown won’t do. Instead, let’s show all possible tags with checkboxes. Example of what we’re aiming for:
 
 <img src='http://making-the-internet.s3.amazonaws.com/laravel-foobooks-tag-checkboxes@2x.png' style='max-width:357px; width:100%' alt='Tags checkboxes'>
 
-To accomplish this, we'll need to gather the following data:
+To accomplish this, we’ll need to gather the following data:
 
 1. All the possible tags
 2. All the tags associated with the book we're looking at.
 
-First, a `getForCheckboxes()` method in the Tag model:
+To get all the possible tags, we’ll create a `getForCheckboxes()` method in the Tag model (this way we can reuse this code in the *Add a book* feature as well).
 
 ```php
+# Tag.php
+
 public static function getForCheckboxes()
 {
-    $tags = self::orderBy('name')->get();
-
-    $tagsForCheckboxes = [];
-
-    foreach ($tags as $tag) {
-        $tagsForCheckboxes[$tag['id']] = $tag->name;
-    }
-
-    return $tagsForCheckboxes;
+    return self::orderBy('name')->select(['name', 'id'])->get();
 }
 ```
 
-Then update `BookController@edit`:
-
+Then update `BookController@edit` to get all the possible tags and the tags associated with this book:
 ```php
+# BookController.php
+
 public function edit($id = null)
 {
     # Get this book and eager load its tags
@@ -52,18 +47,18 @@ public function edit($id = null)
     $authors = Author::getForDropdown();
 
     # Get all the possible tags so we can include them with checkboxes in the view
-    $allTags = Tag::getForCheckboxes();
+    $tags = Tag::getForCheckboxes();
 
     # Get just the tag names for tags associated with this book;
     # will be used in the view to decide which tags should be checked off
-    $tags = $book->tags->pluck('tags.id')->toArray();
+    $bookTags = $book->tags->pluck('id')->toArray();
 
     return view('book.edit')
         ->with([
             'book' => $book,
             'authors' => $authors,
-            'allTags' => $tagsForCheckboxes,
             'tags' => $tags,
+            'bookTags' => $bookTags,
         ]);
 }
 ```
@@ -75,16 +70,16 @@ Use this array of tags to construct the checkboxes in the view:
 # [...]
 
 <label>Tags</label>
-@foreach($tags as $tagId => $tagName)
+@foreach($tags as $tag)
     <ul class='tags'>
         <li>
             <label>
                 <input
-                    {{ (in_array($tagId, $tags)) ? 'checked' : '' }}
+                    {{ (in_array($tag->id, $bookTags)) ? 'checked' : '' }}
                     type='checkbox'
                     name='tags[]'
-                    value='{{ $tagId }}'>
-                {{ $tagName }}
+                    value='{{ $tag->id }}'>
+                {{ $tag->name }}
             </label>
         </li>
     </ul>
