@@ -106,7 +106,7 @@ public function up()
 {
     Schema::create('book_tag', function (Blueprint $table) {
 
-        $table->increments('id');
+        $table->bigIncrements('id');
         $table->timestamps();
 
         # `book_id` and `tag_id` will be foreign keys, so they have to be unsigned
