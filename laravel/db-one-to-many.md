@@ -63,7 +63,7 @@ Fill in the up/down methods:
 public function up()
 {
     Schema::create('authors', function (Blueprint $table) {F
-        $table->increments('id');
+        $table->bigIncrements('id');
         $table->timestamps();
 
         $table->string('first_name');
@@ -169,7 +169,7 @@ public function up()
         # $table->dropColumn('author');
 
         # Add a new INT field called `author_id` that has to be unsigned (i.e. positive)
-        $table->integer('author_id')->unsigned();
+        $table->bigInteger('author_id')->unsigned();
 
         # This field `author_id` is a foreign key that connects to the `id` field in the `authors` table
         $table->foreign('author_id')->references('id')->on('authors');
