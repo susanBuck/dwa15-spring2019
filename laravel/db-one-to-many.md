@@ -168,7 +168,7 @@ public function up()
         # Can do this here, or update the original migration that creates the `books` table
         # $table->dropColumn('author');
 
-        # Add a new INT field called `author_id` that has to be unsigned (i.e. positive)
+        # Add a new bigint field called `author_id` that has to be unsigned (i.e. positive)
         $table->bigInteger('author_id')->unsigned();
 
         # This field `author_id` is a foreign key that connects to the `id` field in the `authors` table
