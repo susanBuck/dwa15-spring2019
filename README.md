@@ -108,3 +108,8 @@ If you have a suggestion regarding a particular topic (correction, typo, etc.), 
     + [Foobooks: One to Many](/laravel/foobooks-week-13a.md)
     + [Relationships: Many to Many](/laravel/db-many-to-many.md)
     + [Foobooks: Many to Many](/laravel/foobooks-week-13b.md)
+    Extras:
+        + [Eloquent vs. Query Builder](laravel/db-eloquent-vs-qb.md)
+        + [Auth setup](/laravel/auth-setup.md)
+        + [Auth usage](/laravel/auth-usage.md)
+        + [Auth in Foobooks](/laravel/auth-foobooks.md) 
