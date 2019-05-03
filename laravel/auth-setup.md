@@ -219,7 +219,7 @@ Similarly, we can amend `resources/views/auth/register.blade.php` to this:
         <input id='email' type='email' name='email' value='{{ old('email') }}' required>
         @include('includes.error-field', ['fieldName' => 'email'])
 
-        <label for='password'>Password (min: 6)</label>
+        <label for='password'>Password (min: 8)</label>
         <input id='password' type='password' name='password' required>
         @include('includes.error-field', ['fieldName' => 'password'])
 
